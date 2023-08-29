@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        #header {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        #description {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        #quote {
+            font-size: 20px;
+            margin: 30px 0;
+            color: #444;
+        }
+        #generate-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        #generate-btn:hover {
+            background-color: #0056b3;
+        }
+        #illustration {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="header">Find Inspiration and Motivation</h1>
+        <p id="description">Embrace positivity and achieve your goals with our motivational quotes.</p>
+        <p id="quote"></p>
+        <button id="generate-btn">Generate</button>
+        <div id="illustration">
+            <img src="https://m.media-amazon.com/images/I/71NhlLvRjuL.jpg" alt="https://m.media-amazon.com/images/I/71NhlLvRjuL.jpg" width="300">
+        </div>
+    </div>
+
+    <script>
+        // Array of 50 motivational quotes
+        const quotes = [
+            "Believe you can and you're halfway there. -Theodore Roosevelt",
+            "Don't watch the clock; do what it does. Keep going. -Sam Levenson",
+            "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle. -Christian D. Larson",
+            // Add more quotes here
+        ];
+
+        // Function to generate a random quote
+        function generateRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById('quote').textContent = randomQuote;
+        }
+
+        // Add click event listener to the generate button
+        document.getElementById('generate-btn').addEventListener('click', generateRandomQuote);
+
+        // Initial quote generation
+        generateRandomQuote();
+    </script>
+</body>
+</html>
